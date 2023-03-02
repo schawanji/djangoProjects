@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+    <a href="{% url 'statelist'%}"> Home </a>
+    {% block content %}
+    
+    {% endblock %}
+</body>
+
+</html>

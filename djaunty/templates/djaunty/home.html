@@ -1,0 +1,19 @@
+{% extends 'djaunty/base.html' %}
+{% load static %}
+{% block head %}
+
+<title>Rent a bike 🚴🏿‍♀️</title>
+<link rel="stylesheet" href="{% static 'daunty/style.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+<h1>Get your ride now!!</h1>
+
+<ul>
+    <li> <a href="{% url 'bikelist' %}">Available Bikes</a> </li>
+    <li><a href="">Renters</a></li>
+    <li><a href="">Rentals</a></li>
+</ul>
+{% endblock %}

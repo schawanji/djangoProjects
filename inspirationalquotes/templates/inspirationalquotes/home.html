@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+
+        }
+
+        p {
+            padding: 3rem;
+            border-radius: 5%;
+            background-color: aquamarine;
+            width: 50%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+{% if user.is_authenticated %}
+
+    <h1>Welcome {{user.username}}</h1>
+
+    <button><a href="{% url 'logout' %}"></a>Log Out</button>
+
+    {% else %}
+
+    <p>You are logged out</p>
+    <button><a href="{% url 'login' %}">Log In</a></button>
+
+    {% endif %}
+
+
+
+
+
+    <h1>Here are some inspirational quotes to get you through the day</h1>
+    <p>{{ quote }}</p>
+
+    {% for item in quotes %}
+    <ul>
+        <li>{{item}}</li>
+    </ul>
+
+
+    {% endfor %}
+</body>
+
+</html>

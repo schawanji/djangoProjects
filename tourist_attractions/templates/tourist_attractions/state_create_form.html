@@ -1,0 +1,28 @@
+{% extends 'tourist_attractions/base.html' %}
+{% load static %}
+
+{% block head %}
+<title>Tourist Attactions 🍷</title>
+<link rel="stylesheet" href="{% static 'tourist_attractions/style.css' %}" />
+{% endblock %}
+
+
+
+{% block content %}
+<h1>Your top destinations for 2023</h1>
+
+
+
+
+
+<p> Enter state name </p>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <input type="submit" value="Submit">
+
+</form>
+
+{% endblock %}

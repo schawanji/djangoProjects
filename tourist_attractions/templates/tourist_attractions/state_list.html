@@ -1,0 +1,26 @@
+{% extends 'tourist_attractions/base.html' %}
+{% load static %}
+
+{% block head %}
+<title>Tourist Attactions 🍷</title>
+<link rel="stylesheet" href="{% static 'tourist_attractions/style.css' %}" />
+{% endblock %}
+
+
+
+{% block content %}
+<h1>Your top destinations for 2023</h1>
+
+
+
+{% for i in state_list %}
+
+<p> Welcome to {{ i.stateName }}</p>
+
+{% endfor %}
+
+
+<a href="{% url 'createstate' %}"> Add state</a>
+<a href="{% url 'createattraction' %}"> Add Attaction</a>
+
+{% endblock %}

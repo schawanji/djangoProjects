@@ -1,0 +1,21 @@
+{% extends 'djaunty/base.html' %}
+{% load static  %}
+{% block head %}
+
+<title>Rent a bike 🚴🏿‍♀️</title>
+<link rel="stylesheet" href="{% static 'djaunty/style.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+<h1>Get your ride now!!</h1>
+
+
+{% for item in bike_list %}
+
+<button> {{ item.color }}</button>
+
+{% endfor %}
+
+{% endblock %}
